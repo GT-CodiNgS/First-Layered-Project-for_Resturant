@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1366.0" style="-fx-background-color: linear-gradient(to top,#34495e, #2c3e50);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pos.controller.MainFormController">
+   <children>
+      <JFXButton fx:id="btnLogout" buttonType="RAISED" cancelButton="true" layoutX="1242.0" layoutY="642.0" onMouseClicked="#btnLogoutOnAction" prefHeight="33.0" prefWidth="91.0" ripplerFill="#e80f13" style="-fx-background-color: #bdc3c7; -fx-background-radius: 90; -fx-border-radius: 90; -fx-border-color: #52D017; -fx-border-width: 2;" text="LOGOUT" underline="true" />
+      <Label layoutX="185.0" layoutY="192.0" prefHeight="33.0" prefWidth="91.0" text="Customers" textFill="#0099fa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1070.0" layoutY="198.0" prefHeight="42.0" prefWidth="144.0" text="Foods &amp; Drinks" textFill="#0099fa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="651.0" layoutY="193.0" prefHeight="33.0" prefWidth="68.0" text="Rooms" textFill="#0099fa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="386.0" prefHeight="33.0" prefWidth="91.0" text="Booking" textFill="#0099fa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="643.0" layoutY="384.0" prefHeight="33.0" prefWidth="55.0" text="Order" textFill="#0099fa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1108.0" layoutY="373.0" prefHeight="33.0" prefWidth="68.0" text="Income" textFill="#0099fa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="630.0" layoutY="579.0" prefHeight="33.0" prefWidth="91.0" text="Settings" textFill="#0099fa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="15.0" layoutY="14.0">
+         <image>
+            <Image url="@../asserts/icons8-log-cabin-100.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="51.0" layoutY="23.0" text="Home" textFill="#c6c6c6">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnCustomer" layoutX="177.0" layoutY="101.0" onMouseClicked="#btnCustomerOnAction" prefHeight="104.0" prefWidth="104.0" ripplerFill="#179db2" style="-fx-border-radius: 90;">
+         <graphic>
+            <ImageView onMouseClicked="#btnCustomerOnAction">
+               <image>
+                  <Image url="@../asserts/cusnewhhh.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnRooms" buttonType="RAISED" layoutX="622.0" layoutY="93.0" onAction="#btnRoomsOnAction" prefHeight="104.0" prefWidth="104.0">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="80.0" onMouseClicked="#btnRoomsOnAction">
+               <image>
+                  <Image url="@../asserts/icons8-hotel-star-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnItems" layoutX="1085.0" layoutY="93.0" onMouseClicked="#btnItemsOnClicked" prefHeight="104.0" prefWidth="108.0" ripplerFill="#0d99ab" text="Button">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="80.0">
+               <image>
+                  <Image url="@../asserts/icons8-street-food-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnBooking" layoutX="177.0" layoutY="292.0" onMouseClicked="#btnBookingOnAction" prefHeight="104.0" prefWidth="108.0">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="80.0">
+               <image>
+                  <Image url="@../asserts/icons8-window-other-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnOrder" layoutX="617.0" layoutY="269.0" onAction="#btnOrderOnAction" prefHeight="104.0" prefWidth="108.0">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="80.0">
+               <image>
+                  <Image url="@../asserts/icons8-waiter-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnIncome" layoutX="1085.0" layoutY="269.0" onMouseClicked="#btnIncomeOnAction" prefHeight="104.0" prefWidth="108.0" text="Button">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="80.0">
+               <image>
+                  <Image url="@../asserts/icons8-bad-idea-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnSettings" buttonType="RAISED" layoutX="616.0" layoutY="491.0" onMouseClicked="#btnSettingsOnAction" prefHeight="104.0" prefWidth="108.0">
+         <graphic>
+            <ImageView fitHeight="90.0" fitWidth="91.0">
+               <image>
+                  <Image url="@../asserts/icons8-services-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

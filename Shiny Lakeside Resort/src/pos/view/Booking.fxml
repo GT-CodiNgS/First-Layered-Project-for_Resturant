@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="650.0" prefWidth="1366.0" style="-fx-background-color: linear-gradient(to top,#34495e, #2c3e50);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pos.controller.BookingFormController">
+   <children>
+      <Label layoutX="442.0" text="ROOM RESERVATION" textFill="#fffdfd">
+         <font>
+            <Font name="Book Antiqua Bold" size="34.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDate" editable="false" layoutX="1156.0" layoutY="31.0" promptText="DATE" style="-fx-background-color: linear-gradient(to top,#34495e, #2c3e50);" />
+      <ComboBox fx:id="cmbRoomNum" layoutX="380.0" layoutY="108.0" prefHeight="33.0" prefWidth="175.0" promptText="ROOM NUMBER" />
+      <TextField fx:id="txtPrice" layoutX="885.0" layoutY="240.0" prefHeight="33.0" prefWidth="226.0" promptText="Total Price(RS)" />
+      <ComboBox fx:id="cmbNIC" layoutX="38.0" layoutY="102.0" prefHeight="33.0" prefWidth="220.0" promptText="NIC" />
+      <ComboBox fx:id="cmbACtype" layoutX="380.0" layoutY="186.0" prefHeight="33.0" prefWidth="175.0" promptText="AC/NON AC" />
+      <TextField fx:id="txtName" layoutX="38.0" layoutY="153.0" prefHeight="33.0" prefWidth="220.0" promptText="NAME" />
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="1180.0" layoutY="234.0" prefHeight="44.0" prefWidth="149.0" style="-fx-background-color: #c0392b; -fx-background-radius: 50;" text="BOOKING" textFill="#fffdfd">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="btnBooking" fitHeight="26.0" fitWidth="25.0">
+               <image>
+                  <Image url="@../asserts/calendar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TextField fx:id="txtDays" layoutX="924.0" layoutY="132.0" prefHeight="33.0" prefWidth="75.0" promptText="DAYS" />
+      <TableView layoutX="31.0" layoutY="295.0" prefHeight="354.0" prefWidth="1299.0">
+        <columns>
+          <TableColumn prefWidth="176.0" text="Date" />
+          <TableColumn prefWidth="119.0" text="Room num" />
+            <TableColumn prefWidth="177.0" text="CheckIn" />
+            <TableColumn prefWidth="163.0" text="CheckOut" />
+            <TableColumn prefWidth="109.0" text="Days" />
+            <TableColumn minWidth="0.0" prefWidth="112.0" text="AC/non AC" />
+            <TableColumn minWidth="0.0" prefWidth="163.0" text="Price(One day)" />
+            <TableColumn minWidth="0.0" prefWidth="138.0" text="Total" />
+            <TableColumn fx:id="clmnbtn" maxWidth="290.0" prefWidth="141.0" text="Button" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnRefresh" defaultButton="true" layoutX="1111.0" layoutY="668.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" text="Refresh" />
+      <Button fx:id="btnCancel" layoutX="1254.0" layoutY="669.0" mnemonicParsing="false" onMouseClicked="#btnCancelOnAction" prefHeight="25.0" prefWidth="84.0" text="Cancel" />
+      <JFXButton fx:id="btnAddCustomer" buttonType="RAISED" layoutX="26.0" layoutY="27.0" onMouseClicked="#btnAddCustomerOnAction" prefHeight="44.0" prefWidth="175.0" style="-fx-background-color: #2980b9; -fx-background-radius: 90;" text="ADD NEW CUSTOMER">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="28.0">
+               <image>
+                  <Image url="@../asserts/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXDatePicker fx:id="checkIn" layoutX="683.0" layoutY="106.0" promptText="check In" style="-fx-background-color: #ecf0f1;" />
+      <JFXDatePicker fx:id="checkOut" layoutX="681.0" layoutY="157.0" promptText="check Out" style="-fx-background-color: #ecf0f1;" />
+      <TextField layoutX="39.0" layoutY="236.0" prefHeight="33.0" prefWidth="187.0" promptText="Booking ID" />
+      <TextField fx:id="txtTime" editable="false" layoutX="1013.0" layoutY="33.0" prefHeight="25.0" prefWidth="115.0" promptText="Time" style="-fx-background-color: linear-gradient(to top,#34495e, #2c3e50);" />
+      <TextField fx:id="txtUnitPrice" layoutX="380.0" layoutY="246.0" prefHeight="33.0" prefWidth="226.0" promptText="Unit Price(RS)" />
+   </children>
+</AnchorPane>

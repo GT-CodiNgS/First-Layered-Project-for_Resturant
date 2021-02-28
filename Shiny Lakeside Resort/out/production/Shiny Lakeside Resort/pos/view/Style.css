@@ -1,0 +1,9 @@
+JFXButoon{
+-fx-background-color; grey;
+}
+JFXButoon:hover{
+//-fx-background-color: teal;
+-fx-background-width: teal;
+-fx-opacity:0.8;
+-fx-border-radius: 56;
+}

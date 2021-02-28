@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="650.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pos.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1399.0" layoutY="-8.0">
+         <image>
+            <Image url="@../asserts/71f53ac12e0253f794782612afc3d917.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="469.0" layoutY="39.0" text="SHINY LAKESIDE RESORT">
+         <font>
+            <Font name="Baskerville Old Face" size="37.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.8047619047619048">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <AnchorPane layoutX="441.0" layoutY="151.0" opacity="0.91" prefHeight="294.0" prefWidth="499.0" style="-fx-background-color: #BCC6CC; -fx-background-radius: 5;" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="450.0">
+         <children>
+            <JFXTextField fx:id="txtUsrName" focusColor="#0895ab" labelFloat="true" layoutX="138.0" layoutY="101.0" prefHeight="25.0" prefWidth="227.0" promptText="Username" text="gayash" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="txtPsswrd" focusColor="#0895ab" labelFloat="true" layoutX="138.0" layoutY="180.0" prefHeight="37.0" prefWidth="251.0" promptText="Password" text="1234" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></JFXPasswordField>
+            <ImageView layoutX="92.0" layoutY="104.0">
+               <image>
+                  <Image url="@../asserts/icons8-edit-user-32.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="95.0" layoutY="195.0">
+               <image>
+                  <Image url="@../asserts/icons8-password-26.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="231.0" layoutY="14.0">
+               <image>
+                  <Image url="@../asserts/icons8-male-user-64.png" />
+               </image>
+            </ImageView>
+            <JFXCheckBox layoutX="407.0" layoutY="199.0" text="Show" />
+            <JFXButton layoutX="196.0" layoutY="247.0" text=" New User Account?" />
+
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" defaultButton="true" layoutX="647.0" layoutY="496.0" onMouseClicked="#btnLoginOnAction" prefHeight="45.0" prefWidth="139.0" ripplerFill="#3bb9ff" style="-fx-background-color: #34495e; -fx-background-radius: 90; -fx-border-color: #3BB9FF; -fx-border-radius: 90;" text=" LOGIN" textFill="#fff9f9" />
+      <JFXProgressBar layoutX="603.0" layoutY="460.0" prefHeight="5.0" prefWidth="227.0" style="-fx-background-radius: 10;" />
+      <ImageView fx:id="btnClose" fitHeight="37.0" fitWidth="39.0" layoutX="1331.0" layoutY="43.0" onMouseClicked="#btnCloseOnAction">
+         <image>
+            <Image url="@../asserts/icons8-cancel-96%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

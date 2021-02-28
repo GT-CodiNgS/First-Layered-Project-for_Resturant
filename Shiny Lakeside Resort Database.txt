@@ -1,0 +1,101 @@
+drop database Shiny;
+CREATE DATABASE Shiny;
+USE Shiny;
+
+
+
+CREATE TABLE Customer(
+	NIC VARCHAR(10) NOT NULL,
+	CID VARCHAR(10) NOT NULL,
+	cusname VARCHAR(30),
+	address VARCHAR(35),
+    contact VARCHAR(10),
+    email VARCHAR(20),
+	CONSTRAINT PRIMARY KEY(NIC)
+);
+INSERT INTO Customer VALUES('970691634V','C001','Dammika Guruge','Kurudugaha road,Elpitiya',0786854000,'Dammika1@gmail.com');
+INSERT INTO Customer VALUES('970691658V','C002','Nisal Waduge','Galle road,Mathara',071629040,'Nisal23@gmail.com');
+
+
+CREATE TABLE Item(
+	IID VARCHAR(20) NOT NULL,
+	itemName VARCHAR(45),
+	description VARCHAR(45),
+    category VARCHAR(20),
+    unitprice double(20,2),
+	CONSTRAINT PRIMARY KEY(IID)
+	
+);
+
+INSERT INTO  Item VALUES('F001','Crabs Curry','250g','Food',1500);
+INSERT INTO  Item VALUES('F002','French Fries','250g','Food',500);
+INSERT INTO  Item VALUES('F003','Clamary Curry','250g','Food',950);
+
+
+INSERT INTO  Item VALUES('D001','Coca-Cola','1l','Drink',220);
+INSERT INTO  Item VALUES('D002','Sprite','1l','Drink',210);
+INSERT INTO  Item VALUES('D003','EGB','750ml','Drink',160);
+
+
+INSERT INTO  Item VALUES('DS001','Ice-Cream','200ml','Dessert',150);
+INSERT INTO  Item VALUES('DS002','Watalappan','150ml','Dessert',200);
+INSERT INTO  Item VALUES('DS003','Fruit Salad','250g','Dessert',170);
+
+
+
+
+CREATE TABLE Room(
+	
+	roomNum VARCHAR(6),
+	roomType VARCHAR(10),
+    roomprice DOUBLE(20,2),
+	CONSTRAINT PRIMARY KEY(roomNum)
+	
+);
+INSERT INTO Room VALUES('01',' A/C','6500.00');
+INSERT INTO Room VALUES('02',' A/C','6500.00');
+INSERT INTO Room VALUES('03',' A/C','6500.00');
+INSERT INTO Room VALUES('04',' A/C','6500.00');
+INSERT INTO Room VALUES('05',' A/C','6500.00');
+
+CREATE TABLE Booking(
+    BID VARCHAR(10),
+	bkDate VARCHAR(10),
+	chekInDate DATE,
+	checkoutDate DATE,
+	days VARCHAR(20) NOT NULL ,
+	acType VARCHAR(20) NOT NULL ,
+	bkFee DOUBLE(20,2),
+    roomNo VARCHAR(6) NOT NULL ,
+    cusNIC VARCHAR(10) NOT NULL,
+	CONSTRAINT PRIMARY KEY (BID),
+	CONSTRAINT FOREIGN KEY (roomNo) REFERENCES Room(roomNum) on Delete Cascade on Update Cascade,
+	CONSTRAINT FOREIGN KEY (cusNIC) REFERENCES Customer(NIC) on Delete Cascade on Update Cascade
+);
+INSERT INTO Booking VALUES('B001','2020.09.01','2020.09.02','2020.09.04','2','AC','30000.00','01','970691634V');
+INSERT INTO Booking VALUES('B002','2020.03.09','2020.09.05','2020.09.08','3','AC','45000.00','02','970691658V');
+
+CREATE TABLE FoodOrder(
+	FOID VARCHAR(20) NOT NULL,
+	category VARCHAR(20) NOT NULL,
+	items VARCHAR(20) NOT NULL,
+	FODate DATE,
+	FOTotal VARCHAR(20) NOT NULL,
+	CONSTRAINT PRIMARY KEY (FOID)
+	
+);
+
+CREATE TABLE OrderDetails(
+	OID INT AUTO_INCREMENT,
+	NICno VARCHAR(10),
+	orderType VARCHAR(45),
+	orderDate DATE,
+	orderTotal double(20,2),
+	CONSTRAINT PRIMARY KEY(OID),
+	CONSTRAINT FOREIGN KEY (NICno) REFERENCES Customer(NIC) on Delete Cascade on Update Cascade
+	
+);
+
+INSERT INTO OrderDetails(NICno,orderType,orderDate,orderTotal) VALUES('970691634V','room','2020.09.01','3000.00');
+INSERT INTO OrderDetails(NICno,orderType,orderDate,orderTotal) VALUES('970691658V','room','2020.09.02','3000.00');
+INSERT INTO OrderDetails(orderType,orderDate,orderTotal) VALUES('food','2020.09.03','2000.00');

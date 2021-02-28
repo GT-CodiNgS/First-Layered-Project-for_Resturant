@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1366.0" style="-fx-background-color: linear-gradient(to top,#34495e, #2c3e50);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pos.controller.RoomsFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="605.0" layoutY="7.0" prefHeight="75.0" prefWidth="191.0" text="Rooms" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua Bold" size="59.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbRoomNum" layoutX="106.0" layoutY="183.0" prefHeight="39.0" prefWidth="203.0" promptText="Room Num" />
+      <TextField fx:id="txtBedType" layoutX="554.0" layoutY="151.0" prefHeight="39.0" prefWidth="242.0" promptText="BedType" />
+      <TextField fx:id="txtPrice" layoutX="1028.0" layoutY="151.0" prefHeight="39.0" prefWidth="209.0" promptText="Price(Rs)" />
+      <TextField fx:id="txtAvailabilty" layoutX="556.0" layoutY="241.0" prefHeight="29.0" prefWidth="148.0" promptText="Availabilty" />
+      <TableView fx:id="tblRoom" layoutX="106.0" layoutY="301.0" prefHeight="347.0" prefWidth="610.0">
+        <columns>
+          <TableColumn fx:id="clmnRoomNum" prefWidth="82.00003051757812" text="RoomNum" />
+            <TableColumn fx:id="clmnBedType" prefWidth="132.0" text="Bed Type" />
+            <TableColumn fx:id="clmnACType" prefWidth="124.0" text="AC/non AC" />
+            <TableColumn fx:id="clmnAvailability" prefWidth="137.0" text="Availabity" />
+            <TableColumn fx:id="clmnPrice" maxWidth="324.0" prefWidth="131.0" text="Price" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="imgRooms" fitHeight="340.0" fitWidth="578.0" layoutX="761.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnCancel" layoutX="1235.0" layoutY="661.0" mnemonicParsing="false" onAction="#btnCancelOnAction" prefHeight="25.0" prefWidth="104.0" text="Cancel" />
+   </children>
+</AnchorPane>
